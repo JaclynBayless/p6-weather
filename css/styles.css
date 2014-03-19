@@ -1,0 +1,22 @@
+.row {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+p {
+  margin-top: .4em;
+  font-size: 1.25em;
+}
+
+.wi-wind-north {
+  text-align: right;
+  color:red;
+}
+
+.wi-wind-south {
+  text-align: left;
+  color:blue;
+}

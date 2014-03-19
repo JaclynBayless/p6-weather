@@ -10,10 +10,10 @@ $(document).ready(function() {
 	    // html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
 	    var temp, todayHi, todayLo, cityAndState; 
 
-      temp = weather.temp + '<span> F</span>';
-      todayHi = weather.high;
-      todayLo = weather.low;
-      cityAndState = weather.city + ' , ' + weather.region;
+      temp = weather.temp + '<span>&deg;F</span>';
+      todayHi = weather.high + '<span>&deg;</span>';
+      todayLo = weather.low + '<span>&deg;</span>';
+      cityAndState = weather.city + ', ' + weather.region;
 
       console.log(temp);
 
