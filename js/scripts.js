@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $.simpleWeather({
 
-    location: 'Austin, TX',
+    location: '98830',
 
     success: function(weather) {
 
