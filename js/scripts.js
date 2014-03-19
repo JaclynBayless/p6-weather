@@ -6,13 +6,26 @@ $(document).ready(function() {
 
     success: function(weather) {
 
-	    html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-	    html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-	    html += '<li class="currently">'+weather.currently+'</li>';
-	    html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+      // Get & Store Weather Data
+	    // html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+	    var temp, todayHi, todayLo, cityAndState; 
+
+      temp = weather.temp + '<span> F</span>';
+      todayHi = weather.high;
+      todayLo = weather.low;
+      cityAndState = weather.city + ' , ' + weather.region;
+
+      console.log(temp);
+
+      //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+	    //html += '<li class="currently">'+weather.currently+'</li>';
+	    //html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
 	  
 		// Display Weather  
-	    $("#weather").html(html);
+	    $('.temp').html(temp);
+      $('.todayHi').html(todayHi);
+      $('.todayLo').html(todayLo);
+      $('.cityAndState').html(cityAndState);
     },
 
     error: function(error) {
